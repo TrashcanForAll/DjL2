@@ -1,0 +1,20 @@
+{% extends 'dictionary/index.html'%}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Dictionary</h1>
+        <table class="table table-bordered">
+           <tr class="row text-center">
+               <th class="col-6">Word</th>
+               <th class="col-6">Translation</th>
+           </tr>
+
+           {% for word in words %}
+           <tr class="row text-center">
+               <td class="col-6"> {{word.originalW}} </td>
+               <td class="col-6"> {{word.translationW}} </td>
+           </tr>
+           {% endfor %}
+        </table>
+    </div>
+{% endblock %}
